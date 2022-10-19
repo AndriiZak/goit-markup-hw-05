@@ -107,6 +107,44 @@ img {
     font-weight: 500;
     letter-spacing: 0.02em;
 }
+.header-line {
+    display: flex;
+    position: relative;    
+}
+
+.carent-link::after {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: -1.86px;
+    transform: translatey(1px);
+    content: "";
+    width: 48px;
+    height: 4px;
+    background-color: var(--color-brand);
+}
+
+.portholio-carent-link{
+    color: var(--color-brand);
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.14;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.portholio-carent-link::after {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: -2.905px;
+    transform: translatey(1px);
+    content: "";
+    width: 78px;
+    height: 4px;
+    background-color: var(--color-brand);
+
+}
 
 .header-tel{
     display: flex;
@@ -334,7 +372,33 @@ footer {
 }
 
 .whot-do-list {
+    
+    
     flex-basis: calc((100%-60px)/3);
+}
+.produkt-thum {
+    display: flex;
+    position: relative;
+
+}
+
+.whot-do-text {
+    display: flex;
+    text-align: center;
+    background-color: red;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: rgba(47, 48, 58, 0.8);
+    color: var(--color-section);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
 }
 
 .our-workers {
