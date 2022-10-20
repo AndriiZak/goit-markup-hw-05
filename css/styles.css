@@ -4,6 +4,9 @@
     --color-background: #2F303A;
     --color-icon:#AFB1B8;
     --color-text-grey:#757575;
+
+    --transition-header:fiill 250ms, color 25000ms,  background-color 2500ms, box-shedow 250ms;
+    --transition-cobic-bezier:cobic-bezier (0.4, 0, 0.2, 1);
 }
 
 /* Header */
@@ -17,7 +20,10 @@ img {
     max-width: 100%;
     height: auto;
 }
-
+.body{
+    overflow: hidden;
+    
+}
 .web {
     color: var(--color-brand);
 }
@@ -155,7 +161,10 @@ img {
 }
 
 .header-tel:hover , .header-tel:focus {
+    
     fill: var(--color-brand);
+    transition: var(--transition-header) var(--transition-cobic-bezier);
+    
 }
 
 .header-email {
@@ -168,6 +177,7 @@ img {
 
 .header-email:hover, .header-email:focus {
     fill: var(--color-brand);
+    transition: var(--transition-header) var(--transition-cobic-bezier);
 }
 
 .header-studio:hover,
@@ -178,6 +188,7 @@ img {
     font-family: inherit;
     font-weight: 500;
     letter-spacing: 0.02em;
+    transition: var(--transition-header) var(--transition-cobic-bezier);
 
 }
 
@@ -189,6 +200,7 @@ img {
     font-family: inherit;
     font-weight: 500;
     letter-spacing: 0.02em;
+    transition: var(--transition-header) var(--transition-cobic-bezier);
 }
 
 .link-header {
@@ -297,6 +309,7 @@ footer {
     font-size: 16px;
     line-height: 1.87;
     font-family: inherit;
+    transition: var(--transition-header) var(--transition-cobic-bezier);
 }
 
 .our-advantages-title {
@@ -473,6 +486,7 @@ footer {
 .main-masenger-link:hover, .main-masenger-link:focus {
     fill: var(--color-section);
     background-color: var(--color-brand);
+    transition: var(--transition-header) var(--transition-cobic-bezier);
 }
 
 .customers {
@@ -511,6 +525,7 @@ footer {
 .customers-link:hover, .customers-link:focus {
     fill: var(--color-brand);
     border: 1px solid var(--color-brand);
+    transition: var(--transition-header) var(--transition-cobic-bezier);
 
 
 }
@@ -554,6 +569,7 @@ footer {
     font-family: inherit;
     font-weight: 400;
     letter-spacing: 0.03em;
+    transition: var(--transition-header) var(--transition-cobic-bezier);
 }
 
 .link-footer {
@@ -622,6 +638,7 @@ footer {
 
 .masenger-link:hover, .masenger-link:focus {
     background-color: var(--color-brand);
+    transition: var(--transition-header) var(--transition-cobic-bezier);
         
 }
 .masengers-li {
@@ -673,6 +690,7 @@ footer {
     letter-spacing: 0.03em;
     font-family: inherit;
     cursor: pointer;
+    transition: var(--transition-header) var(--transition-cobic-bezier);
 }
 
 
@@ -701,6 +719,7 @@ footer {
     font-family: inherit;
     font-weight: 500;
     letter-spacing: 0.03em;
+    transition: var(--transition-header) var(--transition-cobic-bezier);
 }
 
 .oll-product-subtitle {
@@ -726,7 +745,7 @@ footer {
     text-decoration: none;
     font-style: normal;
     cursor: default;
-
+    transition: var(--transition-header) var(--transition-cobic-bezier);
 }
 
 .oll-product-link {
@@ -753,6 +772,7 @@ footer {
 }
 .list:hover, .list:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition: var(--transition-header) var(--transition-cobic-bezier);
 }
 .oll-product-list:nth-last-child(-n+3) {
     margin-bottom: 0;
@@ -778,4 +798,54 @@ footer {
 
 .border {
     border: 1px solid #EEEEEE;
+}
+
+/* backdrop */
+.backdrop {
+    position: fixed;
+   
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms; 
+
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+   
+    width:528px;
+    height:581px;
+
+    background-color: var(--color-section);
+}
+
+
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    
+}
+
+.modal-button {
+    position: absolute;
+    margin: 8px 8px 0 0;
+    padding: 6px 6px;
+    right: 0;
+    top: 0;
+
+    width: 30px;
+    height: 30px;
+
+    background-color: var(--color-section);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
 }

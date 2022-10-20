@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
-  <body>
+  <body class="body">
     <header class="header">
       <div class="container">
         <div class="header-container">
@@ -83,7 +83,7 @@
       <section class="hero">
         <div class="container hero-top">
           <h1 class="hero-header">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="link-hero-button">
+          <button type="button" class="link-hero-button" data-modal-open>
             Замовити послугу
           </button>
         </div>
@@ -540,6 +540,16 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-button" data-modal-close>
+          <svg width="18px" height="18px">
+            <use href="./images/symbol-defs.svg#icon-close-black"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
