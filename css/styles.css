@@ -5,11 +5,13 @@
     --color-icon:#AFB1B8;
     --color-text-grey:#757575;
 
-    --transition-header:fiill 250ms, color 25000ms,  background-color 2500ms, box-shedow 250ms;
-    --transition-cobic-bezier:cobic-bezier (0.4, 0, 0.2, 1);
+    --transition-header: fiill 250ms, color 250ms,  background-color 2500ms, box-shedow 250ms;
+    --transition-cobic-bezier:cubic-bezier (0.4, 0, 0.2, 1);
+    --transition-translate: transform 250ms
 }
 
 /* Header */
+
 header {
 
     color: #ECECEC;
@@ -20,10 +22,8 @@ img {
     max-width: 100%;
     height: auto;
 }
-.body{
-    overflow: hidden;
-    
-}
+
+
 .web {
     color: var(--color-brand);
 }
@@ -161,7 +161,8 @@ img {
 }
 
 .header-tel:hover , .header-tel:focus {
-    
+    transition: var(--transition-header);
+
     fill: var(--color-brand);
     transition: var(--transition-header) var(--transition-cobic-bezier);
     
@@ -176,12 +177,16 @@ img {
 }
 
 .header-email:hover, .header-email:focus {
+    transition: var(--transition-header);  
+
     fill: var(--color-brand);
     transition: var(--transition-header) var(--transition-cobic-bezier);
 }
 
 .header-studio:hover,
 .header-studio:focus {
+    transition: var(--transition-header);  
+
     color: var(--color-brand);
     font-size: 14px;
     line-height: 1.14;
@@ -194,6 +199,8 @@ img {
 
 .link-header:hover,
 .link-header:focus {
+    transition: var(--transition-header);  
+
     color: var(--color-brand);
     font-size: 14px;
     line-height: 1.14;
@@ -287,6 +294,7 @@ footer {
     display: block;
     margin-left: auto;
     margin-right: auto;
+      
 
     color: var(--color-section);
     background-color: var(--color-brand);
@@ -303,13 +311,14 @@ footer {
 
 .link-hero-button:hover,
 .link-hero-button:focus {
+    transition: var(--transition-header);   
+
     color: var(--color-section);
     background-color: #188ce8;
     cursor: pointer;
     font-size: 16px;
     line-height: 1.87;
     font-family: inherit;
-    transition: var(--transition-header) var(--transition-cobic-bezier);
 }
 
 .our-advantages-title {
@@ -484,6 +493,8 @@ footer {
 }
 
 .main-masenger-link:hover, .main-masenger-link:focus {
+    transition: var(--transition-header);  
+
     fill: var(--color-section);
     background-color: var(--color-brand);
     transition: var(--transition-header) var(--transition-cobic-bezier);
@@ -523,6 +534,8 @@ footer {
 }
 
 .customers-link:hover, .customers-link:focus {
+    transition: var(--transition-header);  
+
     fill: var(--color-brand);
     border: 1px solid var(--color-brand);
     transition: var(--transition-header) var(--transition-cobic-bezier);
@@ -563,6 +576,8 @@ footer {
 
 .footer:hover,
 .footer:focus {
+    transition: var(--transition-header);  
+
     color: var(--color-brand);
     font-size: 14px;
     line-height: 1.71;
@@ -637,8 +652,9 @@ footer {
     }
 
 .masenger-link:hover, .masenger-link:focus {
+    transition: var(--transition-header);  
     background-color: var(--color-brand);
-    transition: var(--transition-header) var(--transition-cobic-bezier);
+    
         
 }
 .masengers-li {
@@ -681,6 +697,8 @@ footer {
 
 .link-oll:hover,
 .link-oll:focus {
+    transition: var(--transition-header);  
+
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     background-color: var(--color-brand);
     color: var(--color-section);
@@ -690,7 +708,7 @@ footer {
     letter-spacing: 0.03em;
     font-family: inherit;
     cursor: pointer;
-    transition: var(--transition-header) var(--transition-cobic-bezier);
+   
 }
 
 
@@ -710,6 +728,7 @@ footer {
 
 .link-button:hover,
 .link-button:focus {
+    transition: var(--transition-header);  
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     background-color: var(--color-brand);
     color: var(--color-section);
@@ -719,7 +738,7 @@ footer {
     font-family: inherit;
     font-weight: 500;
     letter-spacing: 0.03em;
-    transition: var(--transition-header) var(--transition-cobic-bezier);
+ 
 }
 
 .oll-product-subtitle {
@@ -740,6 +759,7 @@ footer {
 
 .oll-product-link:hover,
 .oll-product-link:focus {
+    transition: var(--transition-header);  
     font-family: inherit;
     color: var(--color-background);
     text-decoration: none;
@@ -771,8 +791,8 @@ footer {
     margin-right: 0;
 }
 .list:hover, .list:focus {
+    transition: var(--transition-header);  
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition: var(--transition-header) var(--transition-cobic-bezier);
 }
 .oll-product-list:nth-last-child(-n+3) {
     margin-bottom: 0;
@@ -798,6 +818,37 @@ footer {
 
 .border {
     border: 1px solid #EEEEEE;
+}
+
+.oll-product-description {
+  position: relative; 
+  overflow: hidden; 
+}
+.oll-product-description-text{
+    position: absolute;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 63px 24px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition:var(--transition-translate);
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.555;
+    letter-spacing: 0.03em;
+    color: var(--color-section);
+    background-color: rgba(33, 150, 243, 0.9);
+    border: 1px solid #000000;
+}
+
+.oll-product-link:hover .oll-product-description-text {
+    transform: translateY(0);
 }
 
 /* backdrop */
@@ -837,10 +888,9 @@ footer {
 
 .modal-button {
     position: absolute;
-    margin: 8px 8px 0 0;
     padding: 6px 6px;
-    right: 0;
-    top: 0;
+    right: 8px;
+    top: 8px;
 
     width: 30px;
     height: 30px;
